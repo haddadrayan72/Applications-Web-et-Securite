@@ -6,8 +6,9 @@ import ImgOverlay from "../GlobalComponents/ImgOverlay";
 import MainBgOne from "../Images/mainBgOne.png";
 import TrainerCard from "./TrainerCard";
 import unnamedd from "../Images/unnamedd.png";
-import TeamTwoBg from "../Images/teamTwo.png";
-import TeamThreeBg from "../Images/teamThree.png";
+import ray from "../Images/ray.png";
+import tg from "../Images/tg.png";
+import am from "../Images/am.png";
 
 const Trainers = () => (
   <section css={styles} className="trainers" id="pages">
@@ -19,18 +20,23 @@ const Trainers = () => (
     <Container>
       <TrainerCard
         trainerName="Céline saoudi"
-        trainerGender="Woman Trainer"
+        trainerGender="Coach femme"
         trainerImg={unnamedd}
       />
       <TrainerCard
         trainerName="Amane Haddad"
-        trainerGender="Men Trainer"
-        trainerImg={TeamTwoBg}
+        trainerGender="Coach Homme"
+        trainerImg={am}
+      />
+      <TrainerCard
+        trainerName="Ait Dris Mohamed"
+        trainerGender="Coach Homme"
+        trainerImg={tg}
       />
       <TrainerCard
         trainerName="Rayan Haddad"
-        trainerGender="Men Trainer"
-        trainerImg={TeamThreeBg}
+        trainerGender="Coach Homme"
+        trainerImg={ray}
       />
     </Container>
   </section>
@@ -47,11 +53,11 @@ const styles = css`
     z-index: 5;
   }
   .container {
-    display: flex;
+    display: relative;
     justify-content: space-between;
     z-index: 6;
     position: relative;
-    padding: 80px 0 0 0;
+    padding: 40px 0 0 0;
   }
   @media(max-width: 650px) {
     .title{

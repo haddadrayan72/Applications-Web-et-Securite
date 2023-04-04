@@ -9,7 +9,7 @@ const JoinUsInfo = ({ title }) => (
       There are many variations of passages of lorem Ipsum available, but the
       majority have suffered alteration.
     </p>
-    <Button text="JOIN NOW" />
+    <Button text="Rejoins nous" />
   </div>
 );
 

@@ -5,10 +5,10 @@ import Button from "../GlobalComponents/Button";
 const FooterCardContainer = () => (
   <div className="wrap" css={styles}>
     <div className="footerCard">
-      <h2>Gym</h2>
-      <p>5th flora, 700/D kings road, green lane New York-1782</p>
-      <a href="#/">+10 367 826 2567</a>
-      <a href="#/">contact@carpenter.com</a>
+      <h2>Notre centre</h2>
+      <p>48 avenue des etas unis Versailles </p>
+      <a href="#/">07 57 08 05 22</a>
+      <a href="#/">e-learning@learn.com</a>
       <div className="footerSocials">
         <i className="fab fa-facebook-f"></i>
         <i className="fab fa-twitter"></i>
@@ -18,20 +18,18 @@ const FooterCardContainer = () => (
       </div>
     </div>
     <div className="footerCard">
-      <h2>Useful Links</h2>
-      <a href="#/">Pricing</a>
-      <a href="#/">About</a>
-      <a href="#/">Gallery</a>
+      <h2>Lien important</h2>
+      <a href="#/">à propos</a>
       <a href="#/">Contact</a>
     </div>
     <div className="footerCard">
       <h2>Subscribe</h2>
       <div className="inputWrap">
-        <input type="email" placeholder="Enter your mail" />
-        <Button text="Subscribe" />
+        <input type="email" placeholder="votre email " />
+        <Button text="inscription" />
       </div>
       <p>
-        Esteem spirit temper too say adieus who direct esteem esteems luckily.
+        On va bien s'amuser.
       </p>
     </div>
   </div>

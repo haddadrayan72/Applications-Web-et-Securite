@@ -8,7 +8,7 @@ const BannerOffer = () => (
     <h2>
       A BIG OFFER FOR <br /> THIS SUMMER
     </h2>
-    <Button text='JOIN NOW' />
+    <Button text='Rejoins nous maintenant' />
   </section>
 );
 

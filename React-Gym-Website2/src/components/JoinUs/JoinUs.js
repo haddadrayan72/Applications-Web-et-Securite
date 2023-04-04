@@ -8,8 +8,8 @@ import ForBoysBg from "../Images/forBoys.png";
 const JoinUs = () => (
   <section css={styles} className="joinUs" id="blog">
     <Container>
-      <JoinUsCard title="FOR GIRL" />
-      <JoinUsCard title="FOR BOYS" />
+      <JoinUsCard title="POUR FEMMES" />
+      <JoinUsCard title="POUR HOMMES" />
     </Container>
   </section>
 );
