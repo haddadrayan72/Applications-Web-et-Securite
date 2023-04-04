@@ -1,0 +1,20 @@
+
+/*style du logo fitlearning*/
+.logo-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: -50px; /* Ajustez la hauteur selon vos besoins */
+   }
+
+.logo {
+     font-family: Helvetica;
+     height: -100px;
+     font-size: 70px; /* Ajustez la taille de police selon vos besoins */
+     font-weight: bold; /* Ajustez le poids de la police selon vos besoins */
+     text-transform: uppercase; /* Transforme le texte en majuscules */
+     letter-spacing: 2px; /* Ajustez l'espacement entre les lettres selon vos besoins */
+     color: #de1010; /* Ajustez la couleur selon vos besoins */
+     margin: 0; /* Supprime les marges par défaut */
+   }
+   
