@@ -3,6 +3,8 @@ import { jsx, css } from "@emotion/core";
 import Button from "../GlobalComponents/Button";
 import BigOfferBg from "../Images/bigOfferBg.webp";
 
+//fonction pour propser des reduction pour etudiant  
+
 const BannerOffer = () => (
   <section css={styles} className="bannerOffer">
     <h2>

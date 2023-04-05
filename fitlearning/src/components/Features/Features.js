@@ -8,6 +8,8 @@ import IconTwo from "../Images/iconTwo.svg";
 import IconThree from "../Images/iconThree.svg";
 import IconFour from "../Images/iconFour.svg";
 
+
+//les differentes formations proposées
 const Features = () => (
   <section css={styles} className="features" id="about">
     <Title
@@ -50,6 +52,30 @@ const styles = css`
       max-width: 640px;
     }
   }
+  div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Aligne le texte horizontalement au centre */
+  margin: 0 15px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p.cardDescription {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
 `;
 
 export default Features;

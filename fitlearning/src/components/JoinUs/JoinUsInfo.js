@@ -6,11 +6,11 @@ const JoinUsInfo = ({ title }) => (
   <div css={styles} className="cardInfo">
     <h2>{title}</h2>
     <p>
-      There are many variations of passages of lorem Ipsum available, but the
-      majority have suffered alteration.
+    La douleur d'aujourd'hui est la force de demain. Ne renoncez jamais à vos rêves, chaque jour est une opportunité de vous rapprocher de vos objectifs.
     </p>
     <Button text="JOIN NOW" />
   </div>
+  
 );
 
 const styles = css`

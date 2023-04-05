@@ -9,6 +9,7 @@ const TrainerCardOverlay = () => (
 );
 
 const styles = css`
+  width: 200%
   position: absolute;
   right: 0;
   bottom: 0;

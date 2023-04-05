@@ -20,6 +20,15 @@ const styles = css`
   justify-content: center;
   align-items: center;
   height: 100%;
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 100px;
+    ...
+  }
+  
   .icon {
     width: 40px;
     height: 40px;

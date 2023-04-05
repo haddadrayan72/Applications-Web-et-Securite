@@ -2,7 +2,8 @@
 import { jsx, css } from "@emotion/core";
 import Container from "../GlobalComponents/Container";
 import BigOfferInfo from "./BigOfferInfo";
-import et from "../Images/et.jpg";
+import etudes from "../Images/etudes.png";
+// page de reduction pour etudiant
 
 const BigOffer = () => (
   <section css={styles} className="bigOffer">
@@ -15,7 +16,7 @@ const BigOffer = () => (
 const styles = css`
   width: 100%;
   padding: 200px 0;
-  background: url('${et}') no-repeat center/cover;
+  background: url('${etudes}') no-repeat center/cover;
   .container {
     display: flex;
     justify-content: flex-end;

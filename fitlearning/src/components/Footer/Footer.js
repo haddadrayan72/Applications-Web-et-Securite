@@ -2,13 +2,13 @@
 import { jsx, css } from "@emotion/core";
 import FooterCardContainer from "./FooterCardContainer";
 import Container from "../GlobalComponents/Container";
-
+//Pied de page (copyright)
 const Footer = () => (
   <footer css={styles} id="contact">
     <FooterCardContainer />
     <Container>
       <p>
-        Copyright &copy;2023 All rights reserved 
+        Y'A PAS DE COPYRIGHT C'EST NOTRE SITE TKT 😉
       </p>
     </Container>
   </footer>

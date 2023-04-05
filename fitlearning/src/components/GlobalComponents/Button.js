@@ -6,7 +6,7 @@ const Button = ({ text }) => (
     {text}
   </a>
 );
-
+//implementation du module button pour l'utilisation de la fonction OnClick() pour naviguer entre les sections de la page
 const styles = css`
   text-decoration: none;
   display: inline-block;

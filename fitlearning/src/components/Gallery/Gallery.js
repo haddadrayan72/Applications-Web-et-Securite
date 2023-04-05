@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import Container from "../GlobalComponents/Container";
 import GalleryImg from "./GalleryImg";
 import GalleryOneBg from "../Images/galleryOne.png";
 import GalleryTwoBg from "../Images/galleryTwo.png";
@@ -9,54 +8,131 @@ import GalleryFourBg from "../Images/galleryFour.png";
 import GalleryFiveBg from "../Images/galleryFive.png";
 import GallerySixBg from "../Images/gallerySix.png";
 
-const Gallery = () => (
-  <section css={styles} className="gallery" id="gallery">
-    <Container>
-      <GalleryImg galleryBg={GalleryOneBg} />
-      <GalleryImg galleryBg={GalleryTwoBg} />
-      <GalleryImg galleryBg={GalleryThreeBg} />
-      <GalleryImg galleryBg={GalleryFourBg} />
-      <GalleryImg galleryBg={GalleryFiveBg} />
-      <GalleryImg galleryBg={GallerySixBg} />
-    </Container>
-  </section>
-);
 
-const styles = css`
-  .container {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    .galleryImg {
-      &:nth-child(3),
-      &:nth-child(4) {
-        width: 100%;
-        max-width: 30%;
-      }
-    }
-  }
-  @media (max-width: 769px) {
-    .container {
-      .galleryImg {
-        max-width: 100%;
-        &:nth-child(3),
-        &:nth-child(4) {
-          max-width: 100%;
-        }
-      }
-    }
-  }
-  @media (min-width: 770px) and (max-width: 1000px) {
-    .container {
-      .galleryImg {
-        max-width: 50%;
-        &:nth-child(3),
-        &:nth-child(4) {
-          max-width: 50%;
-        }
-      }
-    }
-  }
+import { css as emotionCss } from '@emotion/react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
+//importation des differentes images de la page
+import SliderHover from 'react-slick';
+
+const Gallery = () => {
+  const settings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '20%',
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          centerPadding: '0',
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          centerPadding: '10%',
+        },
+      },
+    ],
+    hover: true, // add hover prop
+  };
+
+  return (
+    <section css={styles} className="gallery" id="gallery">
+      <div css={padding}></div>
+      <SliderHover {...settings} hoverPause={true}>
+        <GalleryImg galleryBg={GalleryOneBg} />
+        <GalleryImg galleryBg={GalleryTwoBg} />
+        <GalleryImg galleryBg={GalleryThreeBg} />
+        <GalleryImg galleryBg={GalleryFourBg} />
+        <GalleryImg galleryBg={GalleryFiveBg} />
+        <GalleryImg galleryBg={GallerySixBg} />
+      </SliderHover>
+      <div css={padding}></div>
+    </section>
+  );
+};
+
+const padding = emotionCss`
+  height: px;
 `;
 
+const styles = emotionCss`
+  .slick-slide > div {
+    outline: none;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+  .slick-prev {
+    left: 20px;
+    z-index: 1;
+  }
+
+  .slick-next {
+    right: 20px;
+    z-index: 1;
+  }
+
+  .slick-dots li button:before {
+    color: black;
+  }
+
+  .slick-center .galleryImg {
+    transform: scale(1.2);
+  }
+
+  .galleryImg {
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .galleryImg {
+      max-width: 100%;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 770px) and (max-width: 1000px) {
+    .galleryImg {
+      max-width: 50%;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        max-width: 50%;
+      }
+    }
+  }
+
+  /* add hover styles */
+  .slick-slider:hover .slick-slide:not(.slick-active) .galleryImg {
+    transform: scale(0.8);
+  }
+  .slick-slider:hover .slick-active .galleryImg {
+    transform: scale(1.2);
+  }
+`;
 export default Gallery;
+
+

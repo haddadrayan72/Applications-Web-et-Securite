@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-
+//generation du menu a partir des composant "Nav" & "Logo"
 const Menu = ({ openMenu }) => (
   <div css={styles} className={openMenu ? "menu" : "hidden"}>
     <a href="#Acceuil">Acceuil</a>
     <a href="#A propos">A propos</a>
     <a href="#Tarifs">Tarifs</a>
-    <a href="#gallerie">gallerie</a>
-    <a href="#pages">pages</a>
+    <a href="#gallerie">Photos</a>
+    <a href="#pages">Coachs</a>
     <a href="#blog">blog</a>
     <a href="#contact">contact</a>
   </div>

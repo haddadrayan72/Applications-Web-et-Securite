@@ -18,18 +18,21 @@ const styles = css`
   border: 1px solid transparent;
   text-align: center;
   cursor: pointer;
-  transition: border 600ms ease-in-out;
+  transition: border 600ms ease-in-out, transform 300ms ease-in-out;
   &:hover {
     border: 1px solid #ff1414;
+    transform: scale(1.2); // Scale the card up twice when hovering
   }
   @media (max-width: 799px) {
     max-width: 520px;
     margin-bottom: 26px;
   }
-  @media(min-width: 800px) and (max-width: 1189px) {
+  @media (min-width: 800px) and (max-width: 1189px) {
     max-width: 48%;
     margin-bottom: 26px;
   }
 `;
 
 export default PricingCard;
+
+

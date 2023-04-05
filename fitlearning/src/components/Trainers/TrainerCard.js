@@ -24,6 +24,7 @@ const styles = css`
   }
   .trainerImg {
     position: relative;
+    
   }
   h2 {
     font-size: 26px;

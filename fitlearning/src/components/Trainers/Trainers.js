@@ -5,9 +5,10 @@ import Title from "../GlobalComponents/Title";
 import ImgOverlay from "../GlobalComponents/ImgOverlay";
 import MainBgOne from "../Images/mainBgOne.png";
 import TrainerCard from "./TrainerCard";
-import unnamedd from "../Images/unnamedd.png";
-import TeamTwoBg from "../Images/teamTwo.png";
-import TeamThreeBg from "../Images/teamThree.png";
+import celine from "../Images/celine.png";
+import rayan from "../Images/rayan.png";
+import dris from "../Images/dris.png";
+import amane from "../Images/amane.png";
 
 const Trainers = () => (
   <section css={styles} className="trainers" id="pages">
@@ -20,22 +21,22 @@ const Trainers = () => (
       <TrainerCard
         trainerName="Céline saoudi"
         trainerGender="Coach Femme"
-        trainerImg={unnamedd}
+        trainerImg={celine}
       />
       <TrainerCard
-        trainerName="Mohamed Aitdris"
+        trainerName="Mohamed Ait Dris"
         trainerGender="Coach Homme"
-        trainerImg={unnamedd}
+        trainerImg={dris}
       />
       <TrainerCard
         trainerName="Amane Haddad"
         trainerGender="Coach Homme"
-        trainerImg={TeamTwoBg}
+        trainerImg={amane}
       />
       <TrainerCard
         trainerName="Rayan Haddad"
         trainerGender="Coach Homme"
-        trainerImg={TeamThreeBg}
+        trainerImg={rayan}
       />
     </Container>
   </section>
@@ -43,21 +44,31 @@ const Trainers = () => (
 
 const styles = css`
   width: 100%;
-  padding: 160px 0;
+  padding: 100px 0;
   text-align: center;
   position: relative;
   background: url('${MainBgOne}') no-repeat center/cover;
+  
   .title{
     position: relative;
     z-index: 5;
   }
   .container {
+    margin-left: 5%;
     display: flex;
     justify-content: space-between;
+    gap: 70px; /* add this line to set the gap between TrainerCard components */
     z-index: 6;
     position: relative;
     padding: 80px 0 0 0;
   }
+  .socialIcons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
   @media(max-width: 650px) {
     .title{
       padding: 0 40px;
@@ -77,5 +88,6 @@ const styles = css`
       }
   }
 `;
+
 
 export default Trainers;
