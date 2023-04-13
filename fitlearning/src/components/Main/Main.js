@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/react";
 import Overlay from "../GlobalComponents/Overlay";
 import Nav from "./Navbar/Nav";
 import Container from "../GlobalComponents/Container";

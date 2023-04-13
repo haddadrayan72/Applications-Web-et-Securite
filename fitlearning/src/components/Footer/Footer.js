@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/react";
 import FooterCardContainer from "./FooterCardContainer";
 import Container from "../GlobalComponents/Container";
 //Pied de page (copyright)

@@ -10,6 +10,8 @@ import Trainers from "./components/Trainers/Trainers";
 import BannerOffer from "./components/BannerOffer/BannerOffer";
 import Footer from "./components/Footer/Footer";
 
+
+
 const App = () => {
   return (
     <div className="App">
@@ -27,3 +29,10 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+

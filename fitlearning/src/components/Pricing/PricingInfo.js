@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/core";
 import Button from "../GlobalComponents/Button";
 
 const PricingInfo = () => (

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/core";
 import TrainerCardOverlay from "./TrainerCardOverlay";
 
 const TrainerCard = ({ trainerName, trainerGender, trainerImg }) => (

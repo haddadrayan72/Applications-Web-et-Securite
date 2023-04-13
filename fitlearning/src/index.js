@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
+
+import JoinPage from './Pages/JoinPage';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import App from './App';
+
+const router = (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/JoinPage" element={<JoinPage />} />
+    </Routes>
+  </BrowserRouter>
 );
 
-serviceWorker.unregister();
+ReactDOM.render(router, document.getElementById('root'));

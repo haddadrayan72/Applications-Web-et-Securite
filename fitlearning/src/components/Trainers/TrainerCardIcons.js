@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/core";
 
 const TrainerCardIcons = () => (
   <div css={styles} className="socialIcons">

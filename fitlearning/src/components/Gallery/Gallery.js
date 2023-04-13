@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+
 import GalleryImg from "./GalleryImg";
 import GalleryOneBg from "../Images/galleryOne.png";
 import GalleryTwoBg from "../Images/galleryTwo.png";

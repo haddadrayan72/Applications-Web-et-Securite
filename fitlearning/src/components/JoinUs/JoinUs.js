@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/react";
 import Container from "../GlobalComponents/Container";
 import JoinUsCard from "./JoinUsCard";
 import ForGirlBg from "../Images/forGirl.png";
@@ -15,51 +15,33 @@ const JoinUs = () => (
 );
 
 const styles = css`
-  width: 100%;
-  .container {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
+width: 100%;
+.container {
+  max-width: 100%;
+  display: flex;
+  .card {
+    background: url('${ForGirlBg}') no-repeat center/cover;
+    background-size: 100% 100%;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      background-size: 105% 105%;
+    }
+    &:last-of-type {
+      background: url('${ForBoysBg}') no-repeat center/cover;
+      background-size: 100% 100%;
+      &:hover{
+          background-size: 105% 105%;
+      }
+    }
+  }
+}
+@media(max-width: 1000px){
+  .container{
+    flex-direction: column;
     align-items: center;
-    .card {
-      width: 400px;
-      height: 500px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: black;
-      font-size: 2rem;
-      text-align: center;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: all 0.3s ease;
-      &:hover {
-        transform: scale(1.05);
-      }
-      &:first-of-type {
-        background-image: url(${ForGirlBg});
-      }
-      &:last-of-type {
-        background-image: url(${ForBoysBg});
-      }
-    }
   }
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      .card {
-        margin-bottom: 2rem;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
+}
 `;
+
 
 export default JoinUs;

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/react";
 //generation du menu a partir des composant "Nav" & "Logo"
 const Menu = ({ openMenu }) => (
   <div css={styles} className={openMenu ? "menu" : "hidden"}>

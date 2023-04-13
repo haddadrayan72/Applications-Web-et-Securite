@@ -1,19 +1,45 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+/** @jsxImportSource @emotion/react */
+import {  css } from "@emotion/react";
+
 import Button from "../GlobalComponents/Button";
+import {  Link } from "react-router-dom";
+import { useState } from "react";
 
-const JoinUsInfo = ({ title }) => (
-  <div css={styles} className="cardInfo">
-    <h2>{title}</h2>
-    <p>
-    La douleur d'aujourd'hui est la force de demain. Ne renoncez jamais à vos rêves, chaque jour est une opportunité de vous rapprocher de vos objectifs.
-    </p>
-    <Button text="JOIN NOW" />
-  </div>
-  
-);
 
-const styles = css`
+
+const JoinUsInfo = ({ title }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMoreClick = () => {
+    setShowMore(true);
+  };
+
+  return (
+    <div css={joinUsInfoStyles} className="cardInfo">
+      <h2>{title}</h2>
+      {showMore ? (
+        <div>
+          <p>venez voir un peu plus sur ce qu'on propose pour vous</p>
+          <Link to="/JoinPage">
+            <Button text="voir plus" />
+          </Link>
+        </div>
+      ) : (
+        <div>
+          <p>venez voir un peu plus sur ce qu'on propose pour vous</p>
+          <Link to="/JoinPage">
+          <Button text="Voir plus" onClick={handleShowMoreClick} />
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
+
+
+
+const joinUsInfoStyles = css`
   z-index: 3;
   color: #fff;
   position: relative;
