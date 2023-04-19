@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
+
 import JoinPage from './Pages/JoinPage';
+import Boutique from './Pages/Boutique';
 import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -15,6 +17,7 @@ const router = (
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/JoinPage" element={<JoinPage />} />
+      <Route path="/Boutique" element={<Boutique />} />
     </Routes>
   </BrowserRouter>
 );

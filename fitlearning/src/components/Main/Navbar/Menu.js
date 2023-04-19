@@ -1,19 +1,26 @@
 /** @jsxImportSource @emotion/react */
 import {  css } from "@emotion/react";
+import { Link } from "react-router-dom";
+
 //generation du menu a partir des composant "Nav" & "Logo"
 const Menu = ({ openMenu }) => (
   <div css={styles} className={openMenu ? "menu" : "hidden"}>
-    <a href="#Acceuil">Acceuil</a>
+    <a href="#Acceuil">Accueil</a>
     <a href="#A propos">A propos</a>
     <a href="#Tarifs">Tarifs</a>
     <a href="#gallerie">Photos</a>
     <a href="#pages">Coachs</a>
-    <a href="#blog">blog</a>
+    <Link to="/boutique" className="button">
+      Boutique
+    </Link>
     <a href="#contact">contact</a>
+    
   </div>
 );
 
 const styles = css`
+//le style de menu
+  
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -73,6 +80,25 @@ const styles = css`
       }
     }
   }
-`;
 
+
+
+  /* styles pour le bouton */
+  .button {
+    padding: 10px 20px;
+    background-color: #FF1414;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .button:hover {
+    background-color: #E60000;
+  }
+`
+;
 export default Menu;
