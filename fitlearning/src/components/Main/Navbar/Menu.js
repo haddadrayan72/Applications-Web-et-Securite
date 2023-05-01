@@ -10,10 +10,11 @@ const Menu = ({ openMenu }) => (
     <a href="#Tarifs">Tarifs</a>
     <a href="#gallerie">Photos</a>
     <a href="#pages">Coachs</a>
+    <a href="#contact">contact</a>
     <Link to="/boutique" className="button">
       Boutique
     </Link>
-    <a href="#contact">contact</a>
+    
     
   </div>
 );

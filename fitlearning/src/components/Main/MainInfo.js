@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import {  css } from "@emotion/react";
+import { css } from "@emotion/react";
 import Button from "../GlobalComponents/Button";
+import { Link } from "react-router-dom";
 
 
 const styles = css`
@@ -60,7 +61,10 @@ const MainInfo = () => (
     <h3>PERSISTE</h3>
     <h1>JUSQU'AU SUCCÉS</h1>
     <p>Rendez l'impossible possible avec nous !</p>
-    <Button text="REJOIGNEZ-NOUS" />
+    <Link to="/Login" >
+      <Button text="REJOIGNEZ-NOUS">
+      </Button>
+    </Link>
   </div>
 );
 
