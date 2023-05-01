@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-
-
-
 import JoinPage from './Pages/JoinPage';
 import Boutique from './Pages/Boutique';
 import Login from './Pages/Login';

@@ -1,98 +1,98 @@
-import React, { useState } from 'react';
-import './Login.css';
-import firebase from './firebase.js';
+import { useState } from "react";
+import {
+     createUserWithEmailAndPassword,
+     signInWithEmailAndPassword,
+     onAuthStateChanged,
+     signOut,
+} from "firebase/auth";
+import { auth } from "../Firebase";
+import "./Login.css";
 
-const Login = () => {
-     const [isSignUp, setIsSignUp] = useState(false);
+function Login() {
+     const [registerEmail, setRegisterEmail] = useState("");
+     const [registerPassword, setRegisterPassword] = useState("");
+     const [loginEmail, setLoginEmail] = useState("");
+     const [loginPassword, setLoginPassword] = useState("");
+     const [user, setUser] = useState({});
 
-     const handleSignIn = (event) => {
-          event.preventDefault();
-          const email = event.target.email.value;
-          const password = event.target.password.value;
-          firebase.auth().signInWithEmailAndPassword(email, password)
-               .then((userCredential) => {
-                    // Connexion réussie, faire quelque chose ici si nécessaire
-                    console.log('Connexion réussie !');
-               })
-               .catch((error) => {
-                    // Gérer les erreurs de connexion ici
-                    console.error(error);
-               });
+     onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser);
+     });
+
+     const register = async () => {
+          try {
+               const user = await createUserWithEmailAndPassword(
+                    auth,
+                    registerEmail,
+                    registerPassword
+               );
+               console.log(user);
+          } catch (error) {
+               console.log(error.message);
+          }
      };
 
-     const toggleSignUp = () => {
-          setIsSignUp(!isSignUp);
+     const login = async () => {
+          try {
+               const user = await signInWithEmailAndPassword(
+                    auth,
+                    loginEmail,
+                    loginPassword
+               );
+               console.log(user);
+          } catch (error) {
+               console.log(error.message);
+          }
+     };
+
+     const logout = async () => {
+          await signOut(auth);
      };
 
      return (
           <div className="login-container">
-               <div className={`container ${isSignUp ? 'right-panel-active' : ''}`}>
-                    <div className="form-container sign-up-container">
-                         <form action="#">
-                              <h1>Create Account</h1>
-                              <div className="social-container">
-                                   <a href="#" className="social">
-                                        <i className="fab fa-facebook-f"></i>
-                                   </a>
-                                   <a href="#" className="social">
-                                        <i className="fab fa-google-plus-g"></i>
-                                   </a>
-                                   <a href="#" className="social">
-                                        <i className="fab fa-linkedin-in"></i>
-                                   </a>
-                              </div>
-                              <span>or use your email for registration</span>
-                              <input type="text" placeholder="Name" />
-                              <input type="email" placeholder="Email" />
-                              <input type="password" placeholder="Password" />
-                              <button>Sign Up</button>
-                         </form>
-                    </div>
-                    <div className="form-container sign-in-container">
-                         <form action="#">
-                              <form onSubmit={handleSignIn}>
-                              <h1>Sign in</h1>
-                              <div className="social-container">
-                                   <a href="#" className="social">
-                                        <i className="fab fa-facebook-f"></i>
-                                   </a>
-                                   <a href="#" className="social">
-                                        <i className="fab fa-google-plus-g"></i>
-                                   </a>
-                                   <a href="#" className="social">
-                                        <i className="fab fa-linkedin-in"></i>
-                                   </a>
-                              </div>
-                              <span>or use your account</span>
-                              <input type="email" placeholder="Email" />
-                              <input type="password" placeholder="Password" />
-                              <a href="10">Forgot your password?</a>
-                              <button type="submit">Sign In</button>
-                                   
-                              </form>
-                         </form>
-                    </div>
-                    <div className="overlay-container">
-                         <div className="overlay">
-                              <div className="overlay-panel overlay-left">
-                                   <h1>Welcome Back!</h1>
-                                   <p>To keep connected with us please login with your personal info</p>
-                                   <button className="ghost" onClick={toggleSignUp} id="signIn">
-                                        Sign In
-                                   </button>
-                              </div>
-                              <div className="overlay-panel overlay-right">
-                                   <h1>Hello, Friend!</h1>
-                                   <p>Enter your personal details and start journey with us</p>
-                                   <button className="ghost" onClick={toggleSignUp} id="signUp">
-                                        Sign Up
-                                   </button>
-                              </div>
-                         </div>
-                    </div>
+               <div>
+                    <h3> Register User </h3>
+                    <input
+                         placeholder="Email..."
+                         onChange={(event) => {
+                              setRegisterEmail(event.target.value);
+                         }}
+                    />
+                    <input
+                         placeholder="Password..."
+                         onChange={(event) => {
+                              setRegisterPassword(event.target.value);
+                         }}
+                    />
+                    <button onClick={register}> Create User</button>
                </div>
+
+               <div>
+                    <h3> Login </h3>
+                    <input
+                         placeholder="Email..."
+                         onChange={(event) => {
+                              setLoginEmail(event.target.value);
+                         }}
+                    />
+                    <input
+                         placeholder="Password..."
+                         onChange={(event) => {
+                              setLoginPassword(event.target.value);
+                         }}
+                    />
+                    <button onClick={login}> Login</button>
+               </div>
+
+               <h4 className="user"> User Logged In: </h4>
+               <p className="user-email">{user?.email}</p>
+
+               <button className="logout-btn" onClick={logout}> Sign Out </button>
+
+               <a href="#" className="link">Terms and conditions</a>
           </div>
      );
-};
+}
 
 export default Login;
