@@ -1,112 +1,68 @@
-/* Colors */
 .login-container {
-     --green-seaweed: rgba(2, 128, 144, 1);
-     --blue-queen: rgba(69, 105, 144, 1);
-     --red-fire: rgba(244, 91, 105, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-/* Fonts */
-.login-container body {
-     font-family: 'Asap', sans-serif;
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Login Form */
-.login-container .login {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     width: 400px;
-     padding: 40px 30px 30px 30px;
-     border-radius: 10px;
-     background-color: white;
-     overflow: hidden;
-     box-shadow: 5px 10px 10px rgba(var(--green-seaweed), 0.2);
-     transition: transform 300ms, box-shadow 300ms;
+input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 
-.login-container .login::before,
-.login-container .login::after {
-     content: '';
-     position: absolute;
-     z-index: -1;
+button {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.login-container .login::before {
-     left: 40%;
-     bottom: -130%;
-     width: 600px;
-     height: 600px;
-     background-color: rgba(var(--blue-queen), 0.15);
-     border-top-left-radius: 40%;
-     border-top-right-radius: 45%;
-     border-bottom-left-radius: 35%;
-     border-bottom-right-radius: 40%;
-     animation: waves 6s infinite linear;
+.user {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-.login-container .login::after {
-     left: 35%;
-     bottom: -125%;
-     width: 600px;
-     height: 600px;
-     background-color: rgba(var(--green-seaweed), 0.2);
-     border-top-left-radius: 40%;
-     border-top-right-radius: 45%;
-     border-bottom-left-radius: 35%;
-     border-bottom-right-radius: 40%;
-     animation: waves 7s infinite;
+.user-email {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.login-container .login>input {
-     display: block;
-     width: 100%;
-     padding: 10px;
-     margin: 15px 0;
-     font-size: 16px;
-     font-family: 'Asap', sans-serif;
-     border-radius: 5px;
-     border: none;
-     background-color: white;
+.logout-btn {
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.login-container .login>button {
-     width: 80px;
-     margin-top: 10px;
-     margin-left: -5px;
-     padding: 10px 0;
-     border-radius: 5px;
-     border: none;
-     background-color: var(--red-fire);
-     color: white;
-     font-size: 16px;
-     font-family: 'Asap', sans-serif;
-     text-transform: uppercase;
-     cursor: pointer;
-     transition: background-color 300ms;
+.link {
+    margin-top: 50px;
+    text-decoration: none;
+    color: blue;
 }
 
-.login-container .login>button:hover {
-     background-color: darken(var(--red-fire), 5%);
-}
-
-/* Waves Animation */
-.login-container {@keyframes waves {
-     from {
-          transform: rotate(0);
-     }
-
-     to {
-          transform: rotate(360deg);
-     }
-}}
-
-/* Link */
-.login-container a {
-     position: absolute;
-     right: 10px;
-     bottom: 10px;
-     font-size: 12px;
-     color: rgba(255, 255, 255, 0.6);
-     text-decoration: none;
+.link:hover {
+    text-decoration: underline;
 }

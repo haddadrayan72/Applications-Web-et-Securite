@@ -4,7 +4,7 @@ import {
      signInWithEmailAndPassword,
      onAuthStateChanged,
      signOut,
-} from "firebase/auth";
+}from "firebase/auth";
 import { auth } from "../Firebase";
 import "./Login.css";
 

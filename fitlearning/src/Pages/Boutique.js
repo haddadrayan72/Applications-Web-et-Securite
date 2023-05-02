@@ -14,6 +14,7 @@ import bio  from '../components/Produits/bio.png';
 import veganbar  from '../components/Produits/veganbar.png';
 
 
+
 const products = [
   {
     id: 1,
