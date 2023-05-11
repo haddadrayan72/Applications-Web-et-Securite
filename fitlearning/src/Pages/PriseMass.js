@@ -24,29 +24,30 @@ const PriseMass = () =>  {
       <h3>Programme Push-Pull-Jambes</h3>
       <p>
         Le programme "push-pull-jambes" est un programme d'entraînement qui se concentre sur les mouvements de poussée, les mouvements de traction et les exercices pour les jambes. Cette méthode d'entraînement est très efficace pour augmenter la masse musculaire, améliorer la force et la stabilité des articulations, et augmenter l'endurance et la flexibilité.
+        Les exercices sont suivie de video explicative faite par Nassim Sahili coach professionnel.
       </p>
       <h4>Jour 1 : Push</h4>
       <ul>
-        <li>Développé couché avec haltères</li>
-        <li>Développé incliné avec haltères</li>
-        <li>Dips</li>
-        <li>Développé militaire avec haltères</li>
-        <li>Écarté incliné avec haltères</li>
+        <li> <a href="https://www.youtube.com/shorts/lUjaugOAVY0">Développé couché</a> avec haltères</li>
+        <li> <a href="https://www.youtube.com/shorts/3rS4I1HKyig">Développé incliné</a> avec haltères</li>
+        <li> <a href="https://www.youtube.com/shorts/MTWrCC1gTuU">Dips</a></li>
+        <li> <a href="https://www.youtube.com/shorts/5pjcqP_nqRA">Développé militaire</a> avec haltères</li>
+        <li><a href="https://www.youtube.com/results?search_query=fit+mass+ecarter+incliner">Écarté incliné</a>  avec poulie</li>
       </ul>
       <h4>Jour 2 : Pull</h4>
       <ul>
-        <li>Tirage horizontal avec poulie</li>
-        <li>Tirage vertical à la poulie haute</li>
-        <li>Tractions assisté avec banc</li>
-        <li>Rowing avec barre</li>
-        <li>Curl biceps avec barre</li>
+        <li> <a href="https://www.youtube.com/shorts/dYDI15OG9mA">Tirage horizontal</a> avec poulie</li>
+        <li> <a href="https://www.youtube.com/shorts/IcE5c6qf4KE">Tirage vertical</a> à la poulie haute</li>
+        <li> <a href="https://www.youtube.com/shorts/bjUsow8pUCM">Tractions assisté</a> avec banc</li>
+        <li> <a href="https://www.youtube.com/shorts/w25tFekISxc">Rowing</a> avec barre</li>
+        <li> <a href="https://www.youtube.com/shorts/-BQQSYnhfl0">Curl biceps</a> avec barre</li>
       </ul>
       <h4>Jour 3 : Jambes</h4>
       <ul>
-        <li>Squats avec barre</li>
-        <li>Fentes arrière</li>
-        <li>Extensions mollets</li>
-        <li>Presse à cuisses</li>
+        <li> <a href="https://www.youtube.com/shorts/rRKCJMrTObI">Squats</a> avec barre</li>
+        <li> <a href="https://www.youtube.com/shorts/nmj-3Qp4hAU">Fentes arrière</a></li>
+        <li> <a href="https://www.youtube.com/shorts/a1cu4Tv6SVc">Extensions mollets</a></li>
+        <li> <a href="https://www.youtube.com/shorts/xbaZ5dNirSY">Presse à cuisses</a></li>
       </ul>
 
       <h3>Nombre de séries et de répétitions</h3>

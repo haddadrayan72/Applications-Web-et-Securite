@@ -39,7 +39,7 @@ pour échauffer vos muscles.
 Le programme de perte de poids est basé sur un programme de cardio et de
 musculation. L'objectif est de brûler des calories et de tonifier les
 muscles pour améliorer votre composition corporelle et perdre du poids.
-Voici le programme :
+Voici le programme avec des video explicative faite par Nassim sahili coach professionnel :
 </p>
 <h3>Jour 1 : Entraînement cardio</h3>
 <ul>
@@ -57,7 +57,7 @@ Vélo elliptique ou rameur pendant 20 minutes
 <ul>
 <li>Échauffement de 5 à 10 minutes</li>
 <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/7P562roxtSc">développé couché</a></li>
-  <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/IcE5c6qf4KE">tirage à la poulie haute</a></li>
+<li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/IcE5c6qf4KE">tirage à la poulie haute</a></li>
 <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/5pjcqP_nqRA">développé militaire</a></li>
 <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/_xC3qsF9cO4">triceps barre au front</a></li>
 </ul>
@@ -81,10 +81,9 @@ Course à pied sur tapis
       <h3>Jour 5 : Musculation (bas du corps)</h3>
       <ul>
         <li>Échauffement de 5 à 10 minutes</li>
-        <li>3 séries de 10 répétitions de squat</li>
-        <li>3 séries de 10 répétitions de soulevé de terre</li>
-        <li>3 séries de 10 répétitions de fentes avant</li>
-        <li>3 séries de 10 répétitions de leg curls</li>
+        <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/rRKCJMrTObI">Squats</a> avec barre</li>
+        <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/MSvRmkiGP4s">Soulever de terre</a> avec haltères</li>
+        <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/JLJWPcN7Sm0">fentes croisé</a></li>
       </ul>
       <h3>Jour 6 : Entraînement cardio</h3>
       <ul>

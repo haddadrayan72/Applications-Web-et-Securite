@@ -26,7 +26,8 @@ return (
     </ol>
     <h2>Séance d'entraînement</h2>
     <p>
-      Le programme de remise en forme est basé sur un programme de cardio et de musculation. L'objectif est d'améliorer votre forme physique, de brûler des calories et de tonifier les muscles. Voici le programme :
+      Le programme de remise en forme est basé sur un programme de cardio et de musculation. L'objectif est d'améliorer votre forme physique, de brûler des calories et de tonifier les muscles. Voici le programme
+      avec video explicative des exercice de musculation par Nassim Sahili coach professionnel :
     </p>
     <h3>Jour 1 : Entraînement cardio</h3>
     <ul>
@@ -43,10 +44,10 @@ return (
     <h3>Jour 2 : Musculation (haut du corps)</h3>
     <ul>
       <li>Échauffement de 5 à 10 minutes</li>
-      <li>3 séries de 10 répétitions de développé couché</li>
-      <li>3 séries de 10 répétitions de tirage à la poulie haute</li>
-      <li>3 séries de 10 répétitions de développé militaire</li>
-      <li>3 séries de 10 répétitions de biceps curls</li>
+      <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/lUjaugOAVY0">Développé couché</a> avec haltères</li>
+      <li>3 séries de 10 répétitions <a href="https://www.youtube.com/shorts/IcE5c6qf4KE">Tirage vertical</a> à la poulie haute</li>
+      <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/5pjcqP_nqRA">Développé militaire</a> avec haltères</li>
+      <li>3 séries de 10 répétitions de <a href="https://www.youtube.com/shorts/-BQQSYnhfl0">Curl biceps</a> avec barre</li>
     </ul>
     <h3>Jour 3 : Entraînement cardio</h3>
     <ul>

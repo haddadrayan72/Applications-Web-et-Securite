@@ -2,6 +2,8 @@
 import {  css } from "@emotion/react";
 import Button from "../GlobalComponents/Button";
 
+import {  Link } from "react-router-dom";
+
 const BigOfferInfo = () => (
   <div css={styles} className="info">
     <h3>
@@ -11,7 +13,10 @@ const BigOfferInfo = () => (
     <p>
     Le sport va chercher la peur pour la dominer, la fatigue pour en triompher, la difficulté pour la vaincre. <br /> la difficulté pour la vaincre.
     </p>
-    <Button text="REJOIGNEZ MAINTENANT" />
+    <Link to="/Reduction">
+                <Button text="Clique-ici pour voir nos réductions" />
+              </Link>
+
   </div>
 );
 
