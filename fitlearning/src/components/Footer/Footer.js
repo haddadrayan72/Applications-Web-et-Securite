@@ -7,9 +7,7 @@ const Footer = () => (
   <footer css={styles} id="contact">
     <FooterCardContainer />
     <Container>
-      <p>
-        Y'A PAS DE COPYRIGHT C'EST NOTRE SITE TKT 😉
-      </p>
+      
     </Container>
   </footer>
 );
