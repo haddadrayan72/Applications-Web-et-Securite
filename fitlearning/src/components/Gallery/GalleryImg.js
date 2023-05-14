@@ -12,17 +12,16 @@ const GalleryImg = ({ galleryBg }) => (
 const styles = css`
   width: 100%;
   max-width: 35%;
-  height: 600px; /* increase height */
+  height: 750px; /* increase height */
   position: relative;
   cursor: pointer;
   &:hover {
     .overlay {
-      opacity: 50%;
+      opacity: 0;
       transition: opacity 700ms ease-in-out;
     }
   }
   .overlay {
-    background-color: black;
     opacity: 0;
   }
   img {

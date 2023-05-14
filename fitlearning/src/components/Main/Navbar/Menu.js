@@ -11,9 +11,8 @@ const Menu = ({ openMenu }) => (
     <a href="#gallerie">Photos</a>
     <a href="#pages">Coachs</a>
     <a href="#contact">contact</a>
-    <Link to="/ProductPage" className="button">Boutique
-  
-    </Link>
+    <Link to="/ProductPage" className="button">Boutique</Link>
+    <Link to="/Boutique" className="button">Guide produits</Link>
     
     
   </div>

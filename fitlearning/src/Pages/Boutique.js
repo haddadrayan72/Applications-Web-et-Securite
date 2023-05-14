@@ -91,32 +91,38 @@ const products = [
 ];
 
 const Boutique = () => {
-    const [cart, setCart] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [isCartValidated, setIsCartValidated] = useState(false);
-  
-    const addToCart = (product) => setCart([...cart, product]);
-  
-    useEffect(() => {
-      let totalPrice = cart.reduce((total, product) => total + product.price, 0);
-      setTotalPrice(totalPrice);
-    }, [cart]);
-  
-    const handleValidation = () => {
-      setCart([]);
-      setIsCartValidated(true);
-    };
-  
-    const handlePayment = () => {
-      // Code pour passer au paiement
-      alert(`Paiement de ${totalPrice} € effectué avec succès !`);
-      setIsCartValidated(false);
-      setTotalPrice(0);
-    };
-  
-    return (
-      <div>
-        <h1>Boutique</h1>
+  const [cart, setCart] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [isCartValidated, setIsCartValidated] = useState(false);
+  const [showProducts, setShowProducts] = useState(false); // Nouvel état pour suivre l'affichage des produits
+
+  const addToCart = (product) => setCart([...cart, product]);
+
+  useEffect(() => {
+    let totalPrice = cart.reduce((total, product) => total + product.price, 0);
+    setTotalPrice(totalPrice);
+  }, [cart]);
+
+  const handleValidation = () => {
+    setCart([]);
+    setIsCartValidated(true);
+  };
+
+  const handlePayment = () => {
+    // Code pour passer au paiement
+    alert(`Paiement de ${totalPrice} € effectué avec succès !`);
+    setIsCartValidated(false);
+    setTotalPrice(0);
+  };
+
+  const handleShowProducts = () => {
+    setShowProducts(true);
+  };
+
+  return (
+    <div>
+      <h1>Boutique</h1>
+      {showProducts ? (
         <div className="container">
           {products.map((product) => (
             <div key={product.id} className="product">
@@ -129,31 +135,33 @@ const Boutique = () => {
             </div>
           ))}
         </div>
-        <div className="cart">
-          <h2>Mon panier</h2>
-          {cart.length > 0 ? (
-            <ul>
-              {cart.map((product) => (
-                <li key={product.id}>
-                  <span>{product.name}</span>
-                  <span>{product.price} €</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>Votre panier est vide.</p>
-          )}
-          {isCartValidated ? (
-            <div className="validation">
-              <p>Total : {totalPrice} €</p>
-              <button onClick={handlePayment}>Payer</button>
-            </div>
-          ) : (
-            <button onClick={handleValidation}>Valider mon panier</button>
-          )}
-        </div>
+      ) : (
+        <button onClick={handleShowProducts}>Guide produits</button>
+      )}
+      <div className="cart">
+        <h2>Mon panier</h2>
+        {cart.length > 0 ? (
+          <ul>
+            {cart.map((product) => (
+              <li key={product.id}>
+                <span>{product.name}</span>
+                <span>{product.price} €</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>Votre panier est vide.</p>
+        )}
+        {isCartValidated ? (
+          <div className="validation">
+            <p>Total : {totalPrice} €</p>
+            <button onClick={handlePayment}>Payer</button>
+          </div>
+        ) : (
+          <button onClick={handleValidation}>Valider mon panier</button>
+        )}
       </div>
-    );
+    </div>
+  );
 };
-
 export default Boutique;

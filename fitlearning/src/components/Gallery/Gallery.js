@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Link } from "react-router-dom";
+
 import GalleryImg from "./GalleryImg";
 import GalleryOneBg from "../Images/galleryOne.png";
 import GalleryTwoBg from "../Images/galleryTwo.png";
@@ -7,12 +7,16 @@ import GalleryThreeBg from "../Images/galleryThree.png";
 import GalleryFourBg from "../Images/galleryFour.png";
 import GalleryFiveBg from "../Images/galleryFive.png";
 import GallerySixBg from "../Images/gallerySix.png";
+
+
 import { css as emotionCss } from '@emotion/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+
 //importation des differentes images de la page
 import SliderHover from 'react-slick';
-import Boutique from "../../Pages/Boutique";
+
 const Gallery = () => {
   const settings = {
     dots: false,
@@ -27,7 +31,7 @@ const Gallery = () => {
       {
         breakpoint: 769,
         settings: {
-        centerPadding: '0',
+          centerPadding: '0',
         },
       },
       {
@@ -39,29 +43,17 @@ const Gallery = () => {
     ],
     hover: true, // add hover prop
   };
- 
+
   return (
     <section css={styles} className="gallery" id="gallery">
       <div css={padding}></div>
       <SliderHover {...settings} hoverPause={true}>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryOneBg} />
-        </Link>
-        <Link to="/Login">
-          <GalleryImg galleryBg={GalleryTwoBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryThreeBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryFourBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryFiveBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GallerySixBg} />
-        </Link>
+        <GalleryImg galleryBg={GalleryOneBg} />
+        <GalleryImg galleryBg={GalleryTwoBg} />
+        <GalleryImg galleryBg={GalleryThreeBg} />
+        <GalleryImg galleryBg={GalleryFourBg} />
+        <GalleryImg galleryBg={GalleryFiveBg} />
+        <GalleryImg galleryBg={GallerySixBg} />
       </SliderHover>
       <div css={padding}></div>
     </section>
