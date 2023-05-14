@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import './Reduction.css';
+import { doc, setDoc } from "firebase/firestore"; 
 
+import { db } from "../../src/Firebase";
+import Button from '../components/GlobalComponents/Button';
+
+
+function connectToDataBasea(){
+  const email = document.getElementById("email").value;
+  const message = "message";
+
+  setDoc(doc(db, "redaction",email), {
+    message: "redaction etudiant"
+  });
+  alert(`ajout avec succes `);
+}
 function Reduction() {
   const [email, setEmail] = useState('');
   const [isStudent, setIsStudent] = useState(false);
@@ -34,7 +48,7 @@ function Reduction() {
       <label htmlFor="student">Êtes-vous étudiant ?</label><br />
       <input type="checkbox" id="student" name="student" checked={isStudent} onChange={handleStudentChange} /><br /><br />
 
-      <button type="button" onClick={handleApplyDiscount}>Appliquer la remise</button>
+      <Button onClick={connectToDataBasea}  text="Envoyer" />
 
       {discountApplied && <p>Votre remise de -20% a été appliquée.</p>}
     </div>
