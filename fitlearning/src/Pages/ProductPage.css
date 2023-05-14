@@ -9,12 +9,12 @@ h3 {
 
 p {
   font-size: 16px;
-  color: #666;
+  color: rgb(118, 45, 45);
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
+  background-color: #ff5252; /* Rouge vif */
+  color: rgb(236, 0, 0);
   font-size: 16px;
   padding: 8px 16px;
   border-radius: 4px;
@@ -24,11 +24,32 @@ button {
 }
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: #6778f7; /* Vert */
 }
 
 .product-container {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(150, 48, 48);
   padding: 16px;
   margin-bottom: 16px;
+}
+
+.product-container input,
+.product-container textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  border: 1px solid rgb(210, 57, 57);
+  border-radius: 4px;
+}
+
+/* Styles spécifiques à chaque produit */
+.product-container:nth-child(odd) {
+  background-color: #939191; /* Gris clair */
+}
+
+.product-container:nth-child(even) {
+  background-color: #ffe2e2; /* Gris légèrement plus foncé */
 }

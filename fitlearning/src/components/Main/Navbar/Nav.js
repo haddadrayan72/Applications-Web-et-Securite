@@ -14,7 +14,7 @@ const Nav = () => {
       <Container>
         <Logo />
         <Menu openMenu={openMenu} />
-        <Button text="REJOIGNEZ-NOUS" />
+        <Button text="moins" />
         <i
           onClick={() => setOpenMenu(!openMenu)}
           id="burgerMenu"

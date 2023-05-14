@@ -19,14 +19,14 @@ const JoinUsInfo = ({ title }) => {
       <h2>{title}</h2>
       {showMore ? (
         <div>
-          <p>venez voir un peu plus sur ce qu'on propose pour vous</p>
+          <p className="description">venez voir un peu plus sur ce qu'on propose pour vous</p>
           <Link to="/JoinPage">
             <Button text="voir plus" />
           </Link>
         </div>
       ) : (
         <div>
-          <p>venez voir un peu plus sur ce qu'on propose pour vous</p>
+          <p className="description">venez voir un peu plus sur ce qu'on propose pour vous</p>
           <Link to="/JoinPage">
           <Button text="Voir plus" onClick={handleShowMoreClick} />
           </Link>
@@ -40,31 +40,32 @@ const JoinUsInfo = ({ title }) => {
 
 
 const joinUsInfoStyles = css`
-  z-index: 3;
-  color: #fff;
-  position: relative;
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  margin: 0 auto;
-  h2 {
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1;
+z-index: 3;
+color: #fff;
+position: relative;
+width: 100%;
+max-width: 380px;
+text-align: center;
+margin: 0 auto;
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+.description {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 18px 0 26px 0;
+  color: #fff; /* Ajout de la couleur blanche */
+}
+.btn {
+  &:hover {
+    background: transparent;
+    color: #ff1414;
+    border: 1px solid #ff1414;
   }
-  p {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 18px 0 26px 0;
-  }
-  .btn {
-    &:hover {
-      background: transparent;
-      color: #ff1414;
-      border: 1px solid #ff1414;
-    }
-  }
+}
 `;
 
 export default JoinUsInfo;

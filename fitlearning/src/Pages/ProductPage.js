@@ -37,8 +37,9 @@ const ProductsPage = () => {
 
   return (
     <div>
+        
       {products.map((product) => (
-        <div key={product.id}>
+        <div key={product.id} className="product-container">
           <h3>{product.desc}</h3>
           <p>{product.nom}</p>
           <p>{product.prix}</p>
