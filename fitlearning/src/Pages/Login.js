@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from 'react';
 import {
      createUserWithEmailAndPassword,
      signInWithEmailAndPassword,
@@ -15,6 +16,16 @@ function Login() {
      const [loginPassword, setLoginPassword] = useState("");
      const [user, setUser] = useState({});
 
+     useEffect(() => {
+          // Ajouter la classe `login-body` au body lorsqu'on rentre dans ce composant
+          document.body.classList.add('login-body');
+      
+          // Nettoyer la classe `login-body` du body lorsqu'on sort du composant
+          return () => {
+            document.body.classList.remove('login-body');
+          };
+        }, []);
+        
      onAuthStateChanged(auth, (currentUser) => {
           setUser(currentUser);
      });
@@ -56,45 +67,45 @@ function Login() {
                     <div class="shape"></div>
                     <div class="shape"></div>
                </div>
-               <form>
-               <div>
-                    <h3> Register User </h3>
-                    <input
-                         placeholder="Email..."
-                         onChange={(event) => {
-                              setRegisterEmail(event.target.value);
-                         }}
+               <form className="login-form">
+                    <div>
+                         <h3> Register User </h3>
+                         <input
+                              placeholder="Email..."
+                              onChange={(event) => {
+                                   setRegisterEmail(event.target.value);
+                              }}
                          />
-                    <input
-                         placeholder="Password..."
-                         onChange={(event) => {
-                              setRegisterPassword(event.target.value);
-                         }}
+                         <input
+                              placeholder="Password..."
+                              onChange={(event) => {
+                                   setRegisterPassword(event.target.value);
+                              }}
                          />
-                    <button onClick={register}> Create User</button>
-               </div>
+                         <button onClick={register}> Create User</button>
+                    </div>
 
-               <div>
-                    <h3> Login </h3>                   
-                    <input
-                         placeholder="Email..."
-                         onChange={(event) => {
-                              setLoginEmail(event.target.value);
-                         }}
+                    <div>
+                         <h3> Login </h3>
+                         <input
+                              placeholder="Email..."
+                              onChange={(event) => {
+                                   setLoginEmail(event.target.value);
+                              }}
                          />
-                    <input
-                         placeholder="Password..."
-                         onChange={(event) => {
-                              setLoginPassword(event.target.value);
-                         }}
+                         <input
+                              placeholder="Password..."
+                              onChange={(event) => {
+                                   setLoginPassword(event.target.value);
+                              }}
                          />
-                    <button onClick={login}> Login</button>
-               </div>
+                         <button onClick={login}> Login</button>
+                    </div>
 
-               <h4 className="user"> User Logged In: </h4>
-               <p className="user-email">{user?.email}</p>
+                    <h4 className="user"> User Logged In: </h4>
+                    <p className="user-email">{user?.email}</p>
 
-               <button className="logout-btn" onClick={logout}> Sign Out </button>
+                    <button className="logout-btn" onClick={logout}> Sign Out </button>
 
                </form>
           </div>

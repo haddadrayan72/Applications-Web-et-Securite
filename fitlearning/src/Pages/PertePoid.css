@@ -1,5 +1,5 @@
 /* Style pour le conteneur principal */
-div {
+.pertecontainer div {
   background-color: #222;
   color: #fff;
   padding: 20px;
@@ -7,12 +7,12 @@ div {
 }
 
 /* Style pour les titres de niveau 2 et 3 */
-h2, h3 {
+.pertecontainer h2, .pertecontainer h3 {
   color: #dd4444;
 }
 
 /* Style pour les paragraphes */
-p {
+.pertecontainer p {
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -21,17 +21,17 @@ p {
 }
 
 /* Style pour les listes à puces et numérotées */
-ul, ol {
+.pertecontainer ul, .pertecontainer ol {
   margin-left: 20px;
 }
 
 /* Style pour les éléments de liste */
-li {
+.pertecontainer li {
   margin: 5px 0;
 }
 
 /* Style pour les liens */
-a {
+.pertecontainer a {
   color: #dd4444;
   text-decoration: none;
 }

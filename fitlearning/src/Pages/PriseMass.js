@@ -3,7 +3,7 @@ import './PriseMass.css';
 
 const PriseMass = () =>  {
   return (
-    <div>
+    <div className="prisemass">
       <h2>Programme d’entraînement spécialisé prise de masse :</h2>
 
       <h3>Objectif :</h3>

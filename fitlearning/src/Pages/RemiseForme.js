@@ -3,7 +3,7 @@ import './RemiseForme.css';
 
 const RemiseForme = () => {
 return (
-<div>
+<div className="remiseform">
     <h1>Programme de remise en forme :</h1>
     <h2>Objectif</h2>
     <p>
@@ -91,4 +91,4 @@ return (
     );
 };
 
-export default PertePoid;
+export default RemiseForme;

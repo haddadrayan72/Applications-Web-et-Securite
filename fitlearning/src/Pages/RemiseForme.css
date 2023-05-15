@@ -1,5 +1,5 @@
 /* Style pour le conteneur principal */
-div {
+.remiseform div {
   background-color: #222;
   color: #fff;
   padding: 20px;
@@ -7,12 +7,12 @@ div {
 }
 
 /* Style pour les titres de niveau 2 et 3 */
-h2, h3 {
+.remiseform h2,.remiseform h3 {
   color: #dd4444;
 }
 
 /* Style pour les paragraphes */
-p {
+.remiseform p {
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -21,22 +21,22 @@ p {
 }
 
 /* Style pour les listes à puces et numérotées */
-ul, ol {
+.remiseform ul,.remiseform ol {
   margin-left: 20px;
 }
 
 /* Style pour les éléments de liste */
-li {
+.remiseform li {
   margin: 5px 0;
 }
 
 /* Style pour les liens */
-a {
+.remiseform a {
   color: #dd4444;
 }
 
 /* Style pour les liens */
-a {
+ .remiseform a {
     color: #dd4444;
     text-decoration: none;
   }
