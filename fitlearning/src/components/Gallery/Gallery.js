@@ -56,15 +56,6 @@ const Gallery = () => {
         <Link to="/RemiseForme">
           <GalleryImg galleryBg={GalleryThreeBg} />
         </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryFourBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GalleryFiveBg} />
-        </Link>
-        <Link to="/Boutique">
-          <GalleryImg galleryBg={GallerySixBg} />
-        </Link>
       </SliderHover>
       <div css={padding}></div>
     </section>

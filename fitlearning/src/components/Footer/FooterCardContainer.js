@@ -38,9 +38,11 @@ const FooterCardContainer = () => (
       <div className="inputWrap">
         <input required id="email" type="email" placeholder="Ecrit ton e-mail" />
       </div>
+      <br></br>
       <div className="inputWrap">
       <input required id="message" type="textarea" placeholder="Ecrit ton message" />   
       </div>
+      <br></br>
       <div  className="inputWrap">
       <Button onClick={connectToDataBase}  text="Envoyer" />
       </div>

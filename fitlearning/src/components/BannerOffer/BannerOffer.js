@@ -29,11 +29,11 @@ text-align: center;
 background: url('${BigOfferBg}') no-repeat center/cover;
 color: #fff;
 h2 {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 900;
 }
 .paragraph {
-  font-size: 18px;
+  font-size: 30px;
   margin-top: 20px;
   color: #fff; /* Couleur du texte en blanc */
   line-height: 1.5;

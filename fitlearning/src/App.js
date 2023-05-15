@@ -19,7 +19,6 @@ const App = () => {
       <JoinUs />
       <Features />
       <BigOffer />
-      <Pricing />
       <Gallery />
       <Trainers />
       <BannerOffer />
